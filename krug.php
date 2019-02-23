@@ -13,10 +13,10 @@ class tacka
 
     public function uKruznici($kruznica)
     {
-        $x=$kruznica->getCo("x");
-        $y=$kruznica->getCo("y");
-        $d=$kruznica->getPoluprecnik();
-        $r=sqrt(($this->y-$y)**2+($this->x-$x)**2);
+        $x = $kruznica->getCo("x");
+        $y = $kruznica->getCo("y");
+        $d = $kruznica->getPoluprecnik();
+        $r = sqrt(($this->y-$y)**2+($this->x-$x)**2);
 
         if ($r > $d) {
             echo "VAN";
@@ -38,9 +38,9 @@ class kruznica
 
     public function __construct($x, $y, $r)
     {
-        $this->r=$r;
-        $this->x=$x;
-        $this->y=$y;
+        $this->r = $r;
+        $this->x = $x;
+        $this->y = $y;
     }
 
     public function getCo($param)
