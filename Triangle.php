@@ -10,8 +10,8 @@ $x_t1 = 1.8;  $y_t1 = 4;
 $x_t2 = 7;    $y_t2 = 4;
 $x_t3 = 1.8;  $y_t3 = 8;
 
-if ($x_t1>=$x_t2 && $x_t1>=$x_t3) {
-    $max_x=$x_t1;
+if ($x_t1 >= $x_t2 && $x_t1 >= $x_t3) {
+    $max_x = $x_t1;
     if ($x_t2 <= $x_t3) {
         $min_x = $x_t2;
     }
@@ -20,19 +20,23 @@ if ($x_t1>=$x_t2 && $x_t1>=$x_t3) {
     }
 }
 
-else if ($x_t2>=$x_t1 && $x_t2>=$x_t3){
-    $max_x=$x_t2;
-    if($x_t1<=$x_t3){
-      $min_x=$x_t1;
+else if ($x_t2 >= $x_t1 && $x_t2 >= $x_t3) {
+    $max_x = $x_t2;
+    if ($x_t1 <= $x_t3) {
+        $min_x = $x_t1;
     }
-    else{$min_x=$x_t3;}
+    else {
+        $min_x = $x_t3;
+    }
 }
 
-else{
-    $max_x=$x_t3;
-    if($x_t1<=$x_t2){
-      $min_x=$x_t1;
-    }else{$min_x=$x_t2;}
+else {
+    $max_x = $x_t3;
+    if ($x_t1 <= $x_t2) {
+        $min_x=$x_t1;
+    } else{
+        $min_x=$x_t2;
+    }
 }
 ////////////tacka y
 if($y_t1>=$y_t2 && $y_t1>=$y_t3){
