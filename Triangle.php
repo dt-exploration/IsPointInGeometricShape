@@ -33,37 +33,44 @@ else if ($x_t2 >= $x_t1 && $x_t2 >= $x_t3) {
 else {
     $max_x = $x_t3;
     if ($x_t1 <= $x_t2) {
-        $min_x=$x_t1;
-    } else{
-        $min_x=$x_t2;
+        $min_x = $x_t1;
+    } else {
+        $min_x = $x_t2;
     }
 }
-////////////tacka y
-if($y_t1>=$y_t2 && $y_t1>=$y_t3){
-  $max_y=$y_t1;
-  if($y_t2>=$y_t3){
-    $min_y=$y_t3;
-  }else{$min_y=$y_t2;}
+//tacka y
+if ($y_t1 >= $y_t2 && $y_t1 >= $y_t3) {
+    $max_y = $y_t1;
+    if ($y_t2 >= $y_t3) {
+        $min_y = $y_t3;
+    } else {
+        $min_y = $y_t2;
+    }
 }
 
-else if($y_t2>=$y_t1 && $y_t2>=$y_t3){
-    $max_y=$y_t2;
-    if($y_t1>=$y_t3){
-      $min_y=$y_t3;
-    }else{$min_y=$y_t1;}
+else if ($y_t2 >= $y_t1 && $y_t2 >= $y_t3) {
+    $max_y = $y_t2;
+    if ($y_t1 >= $y_t3) {
+      $min_y = $y_t3;
+    } else {
+      $min_y = $y_t1;
+    }
 }
-else{
-    $max_y=$y_t3;
-    if($y_t1<=$y_t2){
+
+else {
+    $max_y = $y_t3;
+    if($y_t1 <= $y_t2) {
       $min_y=$y_t1;
-} else{$min_y=$y_t2;}
+    } else {
+      $min_y = $y_t2;
+    }
 }
 
 
-if(($x>$max_x or $x<$min_x) or ($y>$max_y or $y<$min_y))
+if (($x > $max_x or $x < $min_x) or ($y > $max_y or $y < $min_y))
 {
-  echo "Tacka se nalazi van geometrijske figure.";
-  die();
+    echo "Tacka se nalazi van geometrijske figure.";
+    die();
 }
 
 $flag=0;
