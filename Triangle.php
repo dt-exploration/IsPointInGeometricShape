@@ -4,7 +4,6 @@
 $x = 2;
 $y = 9;
 
-
 ///unesi tacke figure
 $x_t1 = 1.8;  $y_t1 = 4;
 $x_t2 = 7;    $y_t2 = 4;
@@ -60,85 +59,78 @@ else if ($y_t2 >= $y_t1 && $y_t2 >= $y_t3) {
 else {
     $max_y = $y_t3;
     if($y_t1 <= $y_t2) {
-      $min_y=$y_t1;
+        $min_y=$y_t1;
     } else {
-      $min_y = $y_t2;
+        $min_y = $y_t2;
     }
 }
 
 
-if (($x > $max_x or $x < $min_x) or ($y > $max_y or $y < $min_y))
-{
+if (($x > $max_x or $x < $min_x) or ($y > $max_y or $y < $min_y)) {
     echo "Tacka se nalazi van geometrijske figure.";
     die();
 }
 
-$flag=0;
-$flagg=0;
-if($y_t2-$y_t1==0 or $y_t3-$y_t1==0 or $y_t3-$y_t2==0){
-  $flag=1;
-  $flagg=1;
+$flag = 0;
+$flagg = 0;
+if ($y_t2-$y_t1 == 0 or $y_t3-$y_t1==0 or $y_t3-$y_t2==0) {
+    $flag = 1;
+    $flagg = 1;
 }
-if($x_t2-$x_t1==0 or $x_t3-$x_t1==0 or $x_t3-$x_t2==0){
-  $flag=2;
-    if($flagg==1){
-      $flag=3;
+
+if ($x_t2-$x_t1 == 0 or $x_t3-$x_t1 == 0 or $x_t3-$x_t2 == 0) {
+    $flag = 2;
+    if ($flagg == 1) {
+        $flag = 3;
     }
 }
-///////////////////////////////////////////////////////////////////////////////
+
 switch($flag){
 ///////////////////////////////////////////////////////////////////////
 case 0:
-$x_presek1=(($y-$y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
-$x_presek2=(($y-$y_t1)/(($y_t3-$y_t1)/($x_t3-$x_t1)))+$x_t1;
-$x_presek3=(($y-$y_t2)/(($y_t3-$y_t2)/($x_t3-$x_t2)))+$x_t2;
+$x_presek1 = (($y-$y_t1) / (($y_t2-$y_t1) / ($x_t2-$x_t1))) + $x_t1;
+$x_presek2 = (($y-$y_t1) / (($y_t3-$y_t1) / ($x_t3-$x_t1))) + $x_t1;
+$x_presek3 = (($y-$y_t2) / (($y_t3-$y_t2) / ($x_t3-$x_t2))) + $x_t2;
 
-if($x_presek1>$max_x or $x_presek1<$min_x){
-
-  $niz=array($x_presek2,$x_presek3);
-  sort($niz);
+if ($x_presek1 > $max_x or $x_presek1 < $min_x) {
+    $niz=array($x_presek2, $x_presek3);
+    sort($niz);
 }
-else if($x_presek2>$max_x or $x_presek2<$min_x){
-
-  $niz=array($x_presek1,$x_presek3);
-  sort($niz);
+else if ($x_presek2 > $max_x or $x_presek2 < $min_x) {
+    $niz=array($x_presek1,$x_presek3);
+    sort($niz);
 }
-else{
-
-  $niz=array($x_presek1,$x_presek2);
-  sort($niz);
-
+else {
+    $niz=array($x_presek1, $x_presek2);
+    sort($niz);
 }
 
-  if($x>=$niz[0] and $x<=$niz[1] )
-  {
-  echo "Tacka se nalazi unutar geometrijske figure.";
-  die();
+if ($x >= $niz[0] and $x <= $niz[1] ) {
+    echo "Tacka se nalazi unutar geometrijske figure.";
+    die();
 }
-  else{
+else {
     echo "Tacka se nalazi van geometrijske figure.";
-  die("8");}
+}
 
 break;
 ////////////////////////////////////////////////////////////////////////////
 case 1:
 
-if($y_t2-$y_t1==0){
-
-  $niz=array($x_t2,$x_t1);
-  sort($niz);
-  $zastava=1332;
+if ($y_t2-$y_t1 == 0) {
+    $niz = array($x_t2, $x_t1);
+    sort($niz);
+    $zastava = 1332;
 }
-else if($y_t3-$y_t1==0){
-
-  $niz=array($x_t3,$x_t1);
-  sort($niz);
-  $zastava=2123;
+else if ($y_t3-$y_t1 == 0) {
+    $niz=array($x_t3, $x_t1);
+    sort($niz);
+    $zastava = 2123;
 }
-else{
-  $niz=array($x_t3,$x_t2);
-  sort($niz);
-  $zastava=1213;
+else {
+    $niz=array($x_t3, $x_t2);
+    sort($niz);
+    $zastava = 1213;
 }
 
 $zastava_1=false;
@@ -146,16 +138,15 @@ if($y==$y_t1 or $y==$y_t2 or $y==$y_t3){
   $zastava_1=true;
 }
 
-if($zastava_1){
-if($x>=$niz[0] and $x<=$niz[1] )
-{
-echo "Tacka se nalazi unutar geometrijske figure.";
-die();
-}
-else{
-  echo "Tacka se nalazi van geometrijske figure.";
-die();
-}
+if ($zastava_1) {
+    if ($x >= $niz[0] and $x <= $niz[1] ) {
+        echo "Tacka se nalazi unutar geometrijske figure.";
+        die();
+    }
+    else {
+        echo "Tacka se nalazi van geometrijske figure.";
+        die();
+    }
 }
 
 else{
