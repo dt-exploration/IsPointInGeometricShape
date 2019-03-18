@@ -58,7 +58,7 @@ else if ($y_t2 >= $y_t1 && $y_t2 >= $y_t3) {
 
 else {
     $max_y = $y_t3;
-    if($y_t1 <= $y_t2) {
+    if ($y_t1 <= $y_t2) {
         $min_y=$y_t1;
     } else {
         $min_y = $y_t2;
@@ -85,7 +85,7 @@ if ($x_t2-$x_t1 == 0 or $x_t3-$x_t1 == 0 or $x_t3-$x_t2 == 0) {
     }
 }
 
-switch($flag){
+switch($flag) {
 ///////////////////////////////////////////////////////////////////////
 case 0:
 $x_presek1 = (($y-$y_t1) / (($y_t2-$y_t1) / ($x_t2-$x_t1))) + $x_t1;
@@ -123,19 +123,19 @@ if ($y_t2-$y_t1 == 0) {
     $zastava = 1332;
 }
 else if ($y_t3-$y_t1 == 0) {
-    $niz=array($x_t3, $x_t1);
+    $niz = array($x_t3, $x_t1);
     sort($niz);
     $zastava = 2123;
 }
 else {
-    $niz=array($x_t3, $x_t2);
+    $niz = array($x_t3, $x_t2);
     sort($niz);
     $zastava = 1213;
 }
 
-$zastava_1=false;
-if($y==$y_t1 or $y==$y_t2 or $y==$y_t3){
-  $zastava_1=true;
+$zastava_1 = false;
+if ($y == $y_t1 or $y == $y_t2 or $y == $y_t3) {
+    $zastava_1 = true;
 }
 
 if ($zastava_1) {
@@ -149,14 +149,14 @@ if ($zastava_1) {
     }
 }
 
-else{
-switch($zastava){
-  case 1213:
-  $x_presek1=(($y-$y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
-  $x_presek2=(($y-$y_t1)/(($y_t3-$y_t1)/($x_t3-$x_t1)))+$x_t1;
-  $niz=array($x_presek1,$x_presek2);
-  sort($niz);
-  break;
+else {
+    switch($zastava) {
+    case 1213:
+    $x_presek1=(($y-$y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
+    $x_presek2=(($y-$y_t1)/(($y_t3-$y_t1)/($x_t3-$x_t1)))+$x_t1;
+    $niz=array($x_presek1,$x_presek2);
+    sort($niz);
+    break;
 
   case 2123:
   $x_presek1=(($y-$y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
