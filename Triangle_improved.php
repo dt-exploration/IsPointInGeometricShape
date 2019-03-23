@@ -26,35 +26,39 @@ class Trougao
     }  
 }
 
-class Tacka{
+class Tacka
+{
 
-private $x;
-private $y;
-public function __construct($x_kordinata,$y_kordinata){
+    private $x;
+    private $y;
+    
+    public function __construct($x_kordinata,$y_kordinata)
+    {
+        $this->x=$x_kordinata;
+        $this->y=$y_kordinata;
+    }
 
-  $this->x=$x_kordinata;
-  $this->y=$y_kordinata;
-}
+    public function baryTransformacija($trougao)
+    {
+        $s=(($trougao->get_Teme("b")->y)-($trougao->get_Teme("c")->y))*(($this->x)-($trougao->get_Teme("c")->x))+
+        (($trougao->get_Teme("c")->x)-($trougao->get_Teme("b")->x))*(($this->y)-($trougao->get_Teme("c")->y));
 
-  public function baryTransformacija($trougao){
-    $s=(($trougao->get_Teme("b")->y)-($trougao->get_Teme("c")->y))*(($this->x)-($trougao->get_Teme("c")->x))+
-    (($trougao->get_Teme("c")->x)-($trougao->get_Teme("b")->x))*(($this->y)-($trougao->get_Teme("c")->y));
+        $l=(($trougao->get_Teme("c")->y)-($trougao->get_Teme("a")->y))*(($this->x)-($trougao->get_Teme("c")->x))+
+        (($trougao->get_Teme("a")->x)-($trougao->get_Teme("c")->x))*(($this->y)-($trougao->get_Teme("c")->y));
 
-    $l=(($trougao->get_Teme("c")->y)-($trougao->get_Teme("a")->y))*(($this->x)-($trougao->get_Teme("c")->x))+
-    (($trougao->get_Teme("a")->x)-($trougao->get_Teme("c")->x))*(($this->y)-($trougao->get_Teme("c")->y));
+        $d=(($trougao->get_Teme("b")->y)-($trougao->get_Teme("c")->y))*(($trougao->get_Teme("a")->x)-($trougao->get_Teme("c")->x))+
+        (($trougao->get_Teme("c")->x)-($trougao->get_Teme("b")->x))*(($trougao->get_Teme("a")->y)-($trougao->get_Teme("c")->y));
 
-    $d=(($trougao->get_Teme("b")->y)-($trougao->get_Teme("c")->y))*(($trougao->get_Teme("a")->x)-($trougao->get_Teme("c")->x))+
-    (($trougao->get_Teme("c")->x)-($trougao->get_Teme("b")->x))*(($trougao->get_Teme("a")->y)-($trougao->get_Teme("c")->y));
+        $lambda1=$s/$d;
+        $lambda2=$l/$d;
+        $lambda3=1-$lambda1-$lambda2;
 
-    $lambda1=$s/$d;
-    $lambda2=$l/$d;
-    $lambda3=1-$lambda1-$lambda2;
+        return array($lambda1,$lambda2,$lambda3);
+     }
 
-    return array($lambda1,$lambda2,$lambda3);
-  }
-
-  public function uTrouglu($trougao){
-    $flag_niz=$this->baryTransformacija($trougao);
+     public function uTrouglu($trougao)
+     {
+         $flag_niz=$this->baryTransformacija($trougao);
 
     $zastava=$zastava1=$zastava2=0;
     foreach($flag_niz as $element)
