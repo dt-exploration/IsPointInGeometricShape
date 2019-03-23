@@ -1,29 +1,30 @@
 <?php
 
-class Trougao {
+class Trougao 
+{
+    private $a;
+    private $b;
+    private $c;
 
-  private $a;
-  private $b;
-  private $c;
-
-  public function __construct($teme1,$teme2,$teme3){
-
-    $this->a=$teme1;
-    $this->b=$teme2;
-    $this->c=$teme3;
-  }
-  public function get_Teme($param){
-    if($param=="a"){
-      return $this->a;
-    }
-    else if($param=="b")
+    public function __construct($teme1, $teme2, $teme3) 
     {
-      return $this->b;
+        $this->a = $teme1;
+        $this->b = $teme2;
+        $this->c = $teme3;     
     }
-    else {
-    return $this->c;
+    
+    public function get_Teme($param){
+        if ($param == "a") {
+            return $this->a;
+        }
+        else if ($param == "b") {
+            return $this->b;
+        }
+        else {
+            return $this->c;
+        }
+    }  
 }
-}}
 
 class Tacka{
 
