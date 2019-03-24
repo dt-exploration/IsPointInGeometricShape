@@ -13,7 +13,8 @@ class Trougao
         $this->c = $teme3;     
     }
     
-    public function get_Teme($param){
+    public function get_Teme($param) 
+    {
         if ($param == "a") {
             return $this->a;
         }
@@ -60,8 +61,8 @@ class Tacka
      {
          $flag_niz=$this->baryTransformacija($trougao);
 
-    $zastava=$zastava1=$zastava2=0;
-    foreach($flag_niz as $element)
+         $zastava = $zastava1 = $zastava2 = 0;
+         foreach($flag_niz as $element)
     {
       $zastava1++;
       if($element==0){
