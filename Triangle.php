@@ -4,6 +4,7 @@
 $x = 2;
 $y = 9;
 "test"
+"whatever works"
 ///unesi tacke figure
 $x_t1 = 1.8;  $y_t1 = 4;
 $x_t2 = 7;    $y_t2 = 4;
