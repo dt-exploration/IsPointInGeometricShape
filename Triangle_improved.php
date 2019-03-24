@@ -55,27 +55,27 @@ class Tacka
         $lambda3=1-$lambda1-$lambda2;
 
         return array($lambda1,$lambda2,$lambda3);
-     }
+    }
 
-     public function uTrouglu($trougao)
-     {
-         $flag_niz=$this->baryTransformacija($trougao);
-
-         $zastava = $zastava1 = $zastava2 = 0;
-         foreach($flag_niz as $element)
+    public function uTrouglu($trougao)
     {
-      $zastava1++;
-      if($element==0){
-        $zastava++;
-}
-      if($zastava1==3){
-        if($zastava==2){
-          echo "Tacka se nalazi u temenu figure";
-          die();
-        }
-        if($zastava==1){
-          echo "Tacka se nalazi na granici figure";
-          die();}
+        $flag_niz=$this->baryTransformacija($trougao);
+
+        $zastava = $zastava1 = $zastava2 = 0;
+        foreach($flag_niz as $element) {
+            $zastava1++;
+            if ($element == 0) {
+                $zastava++;
+            }
+            if ($zastava1 == 3) {
+                if($zastava == 2) {
+                    echo "Tacka se nalazi u temenu figure";
+                    die();
+           }
+           if ($zastava==1) {
+               echo "Tacka se nalazi na granici figure";
+               die();
+           }
 }
 
       if($zastava!=0){
