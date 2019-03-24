@@ -3,7 +3,7 @@
 ///unesi tacku
 $x = 2;
 $y = 9;
-
+"test"
 ///unesi tacke figure
 $x_t1 = 1.8;  $y_t1 = 4;
 $x_t2 = 7;    $y_t2 = 4;
@@ -306,7 +306,7 @@ if ($x_t2 - $x_t1 == 0){
   else {
       $hipotenuza=13;};
   }
-        
+
 else if ($x_t3-$x_t1 == 0){
 
   $niz = array($y_t3,$y_t1);
