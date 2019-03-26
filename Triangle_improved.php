@@ -50,11 +50,11 @@ class Tacka
         $d=(($trougao->get_Teme("b")->y)-($trougao->get_Teme("c")->y))*(($trougao->get_Teme("a")->x)-($trougao->get_Teme("c")->x))+
         (($trougao->get_Teme("c")->x)-($trougao->get_Teme("b")->x))*(($trougao->get_Teme("a")->y)-($trougao->get_Teme("c")->y));
 
-        $lambda1=$s/$d;
-        $lambda2=$l/$d;
-        $lambda3=1-$lambda1-$lambda2;
+        $lambda1 = $s/$d;
+        $lambda2 = $l/$d;
+        $lambda3 = 1-$lambda1-$lambda2;
 
-        return array($lambda1,$lambda2,$lambda3);
+        return array($lambda1, $lambda2, $lambda3);
     }
 
     public function uTrouglu($trougao)
@@ -72,7 +72,7 @@ class Tacka
                     echo "Tacka se nalazi u temenu figure";
                     die();
            }
-           if ($zastava==1) {
+           if ($zastava == 1) {
                echo "Tacka se nalazi na granici figure";
                die();
            }
@@ -100,7 +100,7 @@ $tacka2 = new Tacka(7, 7);
 $tacka3 = new Tacka(12, 4);
 $trougao = new Trougao($tacka1, $tacka2, $tacka3);
 
-$tacka = new Tacka(3,3);
+$tacka = new Tacka(3, 3);
 $tacka->uTrouglu($trougao);
 
 ?>
