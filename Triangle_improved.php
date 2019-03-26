@@ -95,12 +95,12 @@ class Tacka
         }
 }}}
 
-$tacka1=new Tacka(3,3);
-$tacka2=new Tacka(7,7);
-$tacka3=new Tacka(12,4);
-$trougao=new Trougao($tacka1,$tacka2,$tacka3);
+$tacka1 = new Tacka(3, 3);
+$tacka2 = new Tacka(7, 7);
+$tacka3 = new Tacka(12, 4);
+$trougao = new Trougao($tacka1, $tacka2, $tacka3);
 
-$tacka=new Tacka(3,3);
+$tacka = new Tacka(3,3);
 $tacka->uTrouglu($trougao);
 
 ?>
