@@ -59,7 +59,7 @@ class Tacka
 
     public function uTrouglu($trougao)
     {
-        $flag_niz=$this->baryTransformacija($trougao);
+        $flag_niz = $this->baryTransformacija($trougao);
 
         $zastava = $zastava1 = $zastava2 = 0;
         foreach($flag_niz as $element) {
@@ -78,18 +78,18 @@ class Tacka
            }
 }
 
-      if($zastava!=0){
+      if ($zastava != 0){
         continue;
       }
 
-      if($element<0){
+      if ($element < 0){
         echo "Tacka je van geometrijske figure";
         die("");}
 
       if($element<1 ){
 
           $zastava2++;
-          if($zastava2==3){
+          if ($zastava2 == 3){
           echo "Tacka se nalazi unutar geometrijske figure";
           die();}
         }
