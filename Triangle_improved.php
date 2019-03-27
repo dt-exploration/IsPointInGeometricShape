@@ -35,19 +35,19 @@ class Tacka
     
     public function __construct($x_kordinata,$y_kordinata)
     {
-        $this->x=$x_kordinata;
-        $this->y=$y_kordinata;
+        $this->x = $x_kordinata;
+        $this->y = $y_kordinata;
     }
 
     public function baryTransformacija($trougao)
     {
-        $s=(($trougao->get_Teme("b")->y)-($trougao->get_Teme("c")->y))*(($this->x)-($trougao->get_Teme("c")->x))+
+        $s = (($trougao->get_Teme("b")->y)-($trougao->get_Teme("c")->y))*(($this->x)-($trougao->get_Teme("c")->x))+
         (($trougao->get_Teme("c")->x)-($trougao->get_Teme("b")->x))*(($this->y)-($trougao->get_Teme("c")->y));
 
-        $l=(($trougao->get_Teme("c")->y)-($trougao->get_Teme("a")->y))*(($this->x)-($trougao->get_Teme("c")->x))+
+        $l = (($trougao->get_Teme("c")->y)-($trougao->get_Teme("a")->y))*(($this->x)-($trougao->get_Teme("c")->x))+
         (($trougao->get_Teme("a")->x)-($trougao->get_Teme("c")->x))*(($this->y)-($trougao->get_Teme("c")->y));
 
-        $d=(($trougao->get_Teme("b")->y)-($trougao->get_Teme("c")->y))*(($trougao->get_Teme("a")->x)-($trougao->get_Teme("c")->x))+
+        $d = (($trougao->get_Teme("b")->y)-($trougao->get_Teme("c")->y))*(($trougao->get_Teme("a")->x)-($trougao->get_Teme("c")->x))+
         (($trougao->get_Teme("c")->x)-($trougao->get_Teme("b")->x))*(($trougao->get_Teme("a")->y)-($trougao->get_Teme("c")->y));
 
         $lambda1 = $s/$d;
@@ -71,27 +71,28 @@ class Tacka
                 if($zastava == 2) {
                     echo "Tacka se nalazi u temenu figure";
                     die();
-           }
-           if ($zastava == 1) {
-               echo "Tacka se nalazi na granici figure";
-               die();
-           }
-}
+                }
+                if ($zastava == 1) {
+                    echo "Tacka se nalazi na granici figure";
+                    die();
+                }
+            }
 
-      if ($zastava != 0){
-        continue;
-      }
+        if ($zastava != 0){
+            continue;
+        }
 
-      if ($element < 0){
-        echo "Tacka je van geometrijske figure";
-        die("");}
+        if ($element < 0){
+            echo "Tacka je van geometrijske figure";
+            die("");}
 
-      if($element<1 ){
+        if($element < 1) {
 
-          $zastava2++;
-          if ($zastava2 == 3){
-          echo "Tacka se nalazi unutar geometrijske figure";
-          die();}
+            $zastava2++;
+            if ($zastava2 == 3){
+            echo "Tacka se nalazi unutar geometrijske figure";
+            die();
+        }
         }
 }}}
 
