@@ -316,20 +316,22 @@ else if ($x_t3-$x_t1 == 0){
   else{$hipotenuza=13;};
 }
 else{
-  $niz=array($y_t3,$y_t2);
+  $niz=array($y_t3, $y_t2);
   sort($niz);
-  if($zastava="12"){$hipotenuza=13;}
-  else{$hipotenuza=12;};
+  if ($zastava == "12"){$hipotenuza = 13;}
+  else{
+      $hipotenuza = 12;
+  };
 }
 
 $zastava_1=false;
-if($x==$x_t1 or $x==$x_t2 or $x==$x_t3){
-  $zastava_1=true;
+if($x == $x_t1 or $x == $x_t2 or $x == $x_t3){
+  $zastava_1 = true;
 }
 
-if($zastava_1){
+if ($zastava_1){
 
-  if($y>=$niz[0] and $y<=$niz[1] )
+  if ($y >= $niz[0] and $y <= $niz[1] )
   {
   echo "Tacka se nalazi unutar geometrijske figure.";
   die();
@@ -342,20 +344,20 @@ if($zastava_1){
 switch($hipotenuza){
 
 case 12:
-$x_presek=(($y-$y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
-$niz=array($x_presek,$min_x);
+$x_presek = (($y-$y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
+$niz = array($x_presek,$min_x);
 sort($niz);
 break;
 
 case 13:
-$x_presek=(($y-$y_t1)/(($y_t3-$y_t1)/($x_t3-$x_t1)))+$x_t1;
-$niz=array($x_presek,$min_x);
+$x_presek = (($y-$y_t1)/(($y_t3-$y_t1)/($x_t3-$x_t1)))+$x_t1;
+$niz = array($x_presek, $min_x);
 sort($niz);
 break;
 
 case 23:
-$x_presek=(($y-$y_t2)/(($y_t3-$y_t2)/($x_t3-$x_t2)))+$x_t2;
-$niz=array($x_presek,$min_x);
+$x_presek = (($y-$y_t2)/(($y_t3-$y_t2)/($x_t3-$x_t2)))+$x_t2;
+$niz = array($x_presek, $min_x);
 sort($niz);
 break;
 }
