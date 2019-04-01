@@ -344,25 +344,25 @@ if ($zastava_1){
 switch($hipotenuza){
 
 case 12:
-$x_presek = (($y-$y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
+$x_presek = (($y - $y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
 $niz = array($x_presek,$min_x);
 sort($niz);
 break;
 
 case 13:
-$x_presek = (($y-$y_t1)/(($y_t3-$y_t1)/($x_t3-$x_t1)))+$x_t1;
+$x_presek = (($y - $y_t1) / (($y_t3 - $y_t1) / ($x_t3 - $x_t1))) + $x_t1;
 $niz = array($x_presek, $min_x);
 sort($niz);
 break;
 
 case 23:
-$x_presek = (($y-$y_t2)/(($y_t3-$y_t2)/($x_t3-$x_t2)))+$x_t2;
+$x_presek = (($y - $y_t2) / (($y_t3 - $y_t2) / ($x_t3 - $x_t2))) + $x_t2;
 $niz = array($x_presek, $min_x);
 sort($niz);
 break;
 }
 
-if($x>=$niz[0] and $x<=$niz[1] )
+if($x >= $niz[0] and $x <= $niz[1] )
 {
 echo "Tacka se nalazi unutar geometrijske figure.";
 die();
