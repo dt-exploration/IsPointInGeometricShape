@@ -94,7 +94,7 @@ $x_presek2 = (($y-$y_t1) / (($y_t3-$y_t1) / ($x_t3-$x_t1))) + $x_t1;
 $x_presek3 = (($y-$y_t2) / (($y_t3-$y_t2) / ($x_t3-$x_t2))) + $x_t2;
 
 if ($x_presek1 > $max_x or $x_presek1 < $min_x) {
-    $niz=array($x_presek2, $x_presek3);
+    $niz = array($x_presek2, $x_presek3);
     sort($niz);
 }
 else if ($x_presek2 > $max_x or $x_presek2 < $min_x) {
