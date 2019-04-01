@@ -3,8 +3,7 @@
 ///unesi tacku
 $x = 2;
 $y = 9;
-"test"
-"whatever works"
+
 ///unesi tacke figure
 $x_t1 = 1.8;  $y_t1 = 4;
 $x_t2 = 7;    $y_t2 = 4;
@@ -174,7 +173,7 @@ else {
   break;
 }
 
-if($x>=$niz[0] and $x<=$niz[1] )
+if($x >= $niz[0] and $x <= $niz[1] )
 {
 echo "Tacka se nalazi unutar geometrijske figure.";
 die();
@@ -202,20 +201,20 @@ else if($x_t3-$x_t1==0){
   sort($niz);
   $zastava=2123;
 }
-else{
-  $niz=array($y_t3,$y_t2);
+else {
+  $niz = array($y_t3, $y_t2);
   sort($niz);
-  $zastava=1213;
+  $zastava = 1213;
 }
 
-$zastava_1=false;
-if($x==$x_t1 or $x==$x_t2 or $x==$x_t3){
+$zastava_1 = false;
+if($x == $x_t1 or $x == $x_t2 or $x == $x_t3){
   $zastava_1=true;
 }
 
 if($zastava_1){
 
-  if($y>=$niz[0] and $y<=$niz[1] )
+  if($y >= $niz[0] and $y <= $niz[1] )
   {
   echo "Tacka se nalazi unutar geometrijske figure.";
   die();
@@ -245,7 +244,7 @@ else{
     case 1332:
     $y13=(($y_t3-$y_t1)/($x_t3-$x_t1))*($x-$x_t1)+$t_t1;
     $y32=(($y_t2-$y_t3)/($x_t2-$x_t3))*($x-$x_t3)+$t_t3;
-    $niz=array($y13,$y32);
+    $niz = array($y13,$y32);
     sort($niz);
     break;
   }
