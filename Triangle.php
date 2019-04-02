@@ -189,17 +189,17 @@ break;
 ////////////////////////////////////////////////////////////////////////////////////////////
 case 2:
 
-if($x_t2-$x_t1==0){
+if($x_t2-$x_t1 == 0){
 
-  $niz=array($y_t2,$y_t1);
+  $niz = array($y_t2, $y_t1);
   sort($niz);
-  $zastava=1332;
+  $zastava = 1332;
 }
-else if($x_t3-$x_t1==0){
+else if($x_t3-$x_t1 == 0){
 
-  $niz=array($y_t3,$y_t1);
+  $niz=array($y_t3, $y_t1);
   sort($niz);
-  $zastava=2123;
+  $zastava = 2123;
 }
 else {
   $niz = array($y_t3, $y_t2);
@@ -209,7 +209,7 @@ else {
 
 $zastava_1 = false;
 if($x == $x_t1 or $x == $x_t2 or $x == $x_t3){
-  $zastava_1=true;
+  $zastava_1 = true;
 }
 
 if($zastava_1){
@@ -225,19 +225,19 @@ if($zastava_1){
 }
   }
 
-else{
+else {
   switch($zastava){
     case 1213:
-    $y12=(($y_t2-$y_t1)/($x_t2-$x_t1))*($x-$x_t1)+$y_t1;
-    $y13=(($y_t3-$y_t1)/($x_t3-$x_t1))*($x-$x_t1)+$y_t1;
-    $niz=array($y12,$y13);
+    $y12 = (($y_t2-$y_t1)/($x_t2-$x_t1))*($x-$x_t1)+$y_t1;
+    $y13 = (($y_t3-$y_t1)/($x_t3-$x_t1))*($x-$x_t1)+$y_t1;
+    $niz = array($y12, $y13);
     sort($niz);
     break;
 
     case 2123:
-    $y21=(($y_t2-$y_t1)/($x_t2-$x_t1))*($x-$x_t1)+$y_t1;
-    $y23=(($y_t3-$y_t2)/($x_t3-$x_t2))*($x-$x_t2)+$y_t2;
-    $niz=array($y21,$y23);
+    $y21 = (($y_t2 - $y_t1) / ($x_t2 - $x_t1)) * ($x - $x_t1) + $y_t1;
+    $y23 = (($y_t3 - $y_t2) / ($x_t3 - $x_t2)) * ($x - $x_t2) + $y_t2;
+    $niz = array($y21, $y23);
     sort($niz);
     break;
 
