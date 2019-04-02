@@ -117,7 +117,7 @@ break;
 ////////////////////////////////////////////////////////////////////////////
 case 1:
 
-if ($y_t2-$y_t1 == 0) {
+if ($y_t2 - $y_t1 == 0) {
     $niz = array($x_t2, $x_t1);
     sort($niz);
     $zastava = 1332;
@@ -159,16 +159,16 @@ else {
     break;
 
   case 2123:
-  $x_presek1 = (($y-$y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
-  $x_presek3 = (($y-$y_t2)/(($y_t3-$y_t2)/($x_t3-$x_t2)))+$x_t2;
-  $niz = array($x_presek1,$x_presek3);
+  $x_presek1 = (($y-$y_t1) / (($y_t2 - $y_t1) / ($x_t2 - $x_t1))) + $x_t1;
+  $x_presek3 = (($y-$y_t2) / (($y_t3 - $y_t2) / ($x_t3 - $x_t2))) + $x_t2;
+  $niz = array($x_presek1, $x_presek3);
   sort($niz);
   break;
 
   case 1332:
-  $x_presek2=(($y-$y_t1)/(($y_t3-$y_t1)/($x_t3-$x_t1)))+$x_t1;
-  $x_presek3=(($y-$y_t2)/(($y_t3-$y_t2)/($x_t3-$x_t2)))+$x_t2;
-  $niz=array($x_presek1,$x_presek3);
+  $x_presek2 = (($y - $y_t1) / (($y_t3 - $y_t1) / ($x_t3 - $x_t1))) + $x_t1;
+  $x_presek3 = (($y - $y_t2) / (($y_t3 - $y_t2) / ($x_t3 - $x_t2))) + $x_t2;
+  $niz=array($x_presek1, $x_presek3);
   sort($niz);
   break;
 }
@@ -228,8 +228,8 @@ if($zastava_1){
 else {
   switch($zastava){
     case 1213:
-    $y12 = (($y_t2-$y_t1)/($x_t2-$x_t1))*($x-$x_t1)+$y_t1;
-    $y13 = (($y_t3-$y_t1)/($x_t3-$x_t1))*($x-$x_t1)+$y_t1;
+    $y12 = (($y_t2 - $y_t1) / ($x_t2 - $x_t1)) * ($x - $x_t1) + $y_t1;
+    $y13 = (($y_t3 - $y_t1) / ($x_t3 - $x_t1)) * ($x - $x_t1) + $y_t1;
     $niz = array($y12, $y13);
     sort($niz);
     break;
