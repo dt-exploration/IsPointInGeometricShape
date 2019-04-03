@@ -309,9 +309,9 @@ if ($x_t2 - $x_t1 == 0){
   };
   }
 
-else if ($x_t3-$x_t1 == 0){
+else if ($x_t3 - $x_t1 == 0){
 
-  $niz = array($y_t3,$y_t1);
+  $niz = array($y_t3, $y_t1);
   sort($niz);
   if ($zastava="12")
   {
@@ -324,13 +324,16 @@ else if ($x_t3-$x_t1 == 0){
 else{
   $niz = array($y_t3, $y_t2);
   sort($niz);
-  if ($zastava == "12"){$hipotenuza = 13;}
+  if ($zastava == "12")
+  {
+      $hipotenuza = 13;
+  }
   else{
       $hipotenuza = 12;
   };
 }
 
-$zastava_1=false;
+$zastava_1 = false;
 if($x == $x_t1 or $x == $x_t2 or $x == $x_t3){
   $zastava_1 = true;
 }
@@ -352,7 +355,7 @@ switch ($hipotenuza) {
 
 case 12:
 $x_presek = (($y - $y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
-$niz = array($x_presek,$min_x);
+$niz = array($x_presek, $min_x);
 sort($niz);
 break;
 
