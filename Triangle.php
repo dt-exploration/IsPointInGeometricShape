@@ -189,7 +189,7 @@ break;
 ////////////////////////////////////////////////////////////////////////////////////////////
 case 2:
 
-if($x_t2-$x_t1 == 0){
+if($x_t2 - $x_t1 == 0){
 
   $niz = array($y_t2, $y_t1);
   sort($niz);
@@ -242,9 +242,9 @@ else {
     break;
 
     case 1332:
-    $y13=(($y_t3-$y_t1)/($x_t3-$x_t1))*($x-$x_t1)+$t_t1;
-    $y32=(($y_t2-$y_t3)/($x_t2-$x_t3))*($x-$x_t3)+$t_t3;
-    $niz = array($y13,$y32);
+    $y13 = (($y_t3 - $y_t1) / ($x_t3 - $x_t1)) * ($x - $x_t1) + $t_t1;
+    $y32 = (($y_t2 - $y_t3) / ($x_t2 - $x_t3)) * ($x - $x_t3) + $t_t3;
+    $niz = array($y13, $y32);
     sort($niz);
     break;
   }
@@ -313,8 +313,13 @@ else if ($x_t3-$x_t1 == 0){
 
   $niz = array($y_t3,$y_t1);
   sort($niz);
-  if ($zastava="12"){$hipotenuza=23;}
-  else{$hipotenuza=13;};
+  if ($zastava="12")
+  {
+      $hipotenuza = 23;
+  }
+  else {
+      $hipotenuza = 13;
+       };
 }
 else{
   $niz = array($y_t3, $y_t2);
