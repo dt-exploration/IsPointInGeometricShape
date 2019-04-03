@@ -266,7 +266,7 @@ if ($y_t2 - $y_t1 == 0){
 
   $niz = array($x_t2, $x_t1);
   sort($niz);
-  $zastava="12";
+  $zastava = "12";
 }
 else if ($y_t3 - $y_t1 == 0){
 
@@ -282,7 +282,7 @@ else {
 
 $zastava_1 = false;
 if ($y == $y_t1 or $y == $y_t2 or $y == $y_t3) {
-    $zastava_1=true;
+    $zastava_1 = true;
 }
 
 if ($zastava_1) {
@@ -354,7 +354,7 @@ if ($zastava_1){
 switch ($hipotenuza) {
 
 case 12:
-$x_presek = (($y - $y_t1)/(($y_t2-$y_t1)/($x_t2-$x_t1)))+$x_t1;
+$x_presek = (($y - $y_t1) / (($y_t2 - $y_t1) / ($x_t2 - $x_t1))) + $x_t1;
 $niz = array($x_presek, $min_x);
 sort($niz);
 break;
