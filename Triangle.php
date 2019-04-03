@@ -59,7 +59,7 @@ else if ($y_t2 >= $y_t1 && $y_t2 >= $y_t3) {
 else {
     $max_y = $y_t3;
     if ($y_t1 <= $y_t2) {
-        $min_y=$y_t1;
+        $min_y = $y_t1;
     } else {
         $min_y = $y_t2;
     }
@@ -97,7 +97,7 @@ if ($x_presek1 > $max_x or $x_presek1 < $min_x) {
     sort($niz);
 }
 else if ($x_presek2 > $max_x or $x_presek2 < $min_x) {
-    $niz = array($x_presek1,$x_presek3);
+    $niz = array($x_presek1, $x_presek3);
     sort($niz);
 }
 else {
@@ -313,7 +313,7 @@ else if ($x_t3 - $x_t1 == 0){
 
   $niz = array($y_t3, $y_t1);
   sort($niz);
-  if ($zastava="12")
+  if ($zastava == "12")
   {
       $hipotenuza = 23;
   }
