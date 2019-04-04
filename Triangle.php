@@ -168,7 +168,7 @@ else {
   case 1332:
   $x_presek2 = (($y - $y_t1) / (($y_t3 - $y_t1) / ($x_t3 - $x_t1))) + $x_t1;
   $x_presek3 = (($y - $y_t2) / (($y_t3 - $y_t2) / ($x_t3 - $x_t2))) + $x_t2;
-  $niz=array($x_presek1, $x_presek3);
+  $niz = array($x_presek1, $x_presek3);
   sort($niz);
   break;
 }
