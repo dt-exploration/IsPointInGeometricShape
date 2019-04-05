@@ -208,13 +208,13 @@ else {
 }
 
 $zastava_1 = false;
-if($x == $x_t1 or $x == $x_t2 or $x == $x_t3){
+if ($x == $x_t1 or $x == $x_t2 or $x == $x_t3){
   $zastava_1 = true;
 }
 
-if($zastava_1){
+if ($zastava_1){
 
-  if($y >= $niz[0] and $y <= $niz[1] )
+  if ($y >= $niz[0] and $y <= $niz[1] )
   {
   echo "Tacka se nalazi unutar geometrijske figure.";
   die();
@@ -248,7 +248,7 @@ else {
     sort($niz);
     break;
   }
-  if($y >= $niz[0] and $y <= $niz[1] )
+  if ($y >= $niz[0] and $y <= $niz[1] )
   {
   echo "Tacka se nalazi unutar geometrijske figure.";
   die();
