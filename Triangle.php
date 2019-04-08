@@ -253,7 +253,7 @@ else {
   echo "Tacka se nalazi unutar geometrijske figure.";
   die();
   }
-  else{
+  else {
     echo "Tacka se nalazi van geometrijske figure.";
   die();
   }
